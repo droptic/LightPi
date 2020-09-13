@@ -22,19 +22,20 @@ def rc_time (pin_to_circuit):
         count += 1
 
     return count
-
-while True:
-    i = rc_time(pin_to_circuit)
-    if i < 400:
-        print("Screen off", i)
-        call(["/usr/bin/vcgencmd", "display_power", "0"])
-        time.sleep(1)
-    elif i >=400:
-        print("Screen on", i)
-        call(["/usr/bin/vcgencmd", "display_power", "1"])
-        time.sleep(10)
+	
+try:	
+	while True:
+		i = rc_time(pin_to_circuit)
+		if i < 400:
+			print("Screen off", i)
+			call(["/usr/bin/vcgencmd", "display_power", "1"])
+			time.sleep(1)
+		elif i >=400:
+			print("Screen on", i)
+			call(["/usr/bin/vcgencmd", "display_power", "0"])
+			time.sleep(1)
 		
 except KeyboardInterrupt:
-    pass
+	pass
 finally:
-    GPIO.cleanup()
+	GPIO.cleanup()
