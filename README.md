@@ -5,9 +5,9 @@ Programa que permite controlar el encedido y apagado de pantalla HDMI conectada 
 
 Dependiendo de las condiciones de iluminacion puede ajustarse el valor de i
 
+# Conexion
 
-# TODO:
--Evaluar si al agregar un capacitor de 1 uf aumenta la capacidad de respuesta del sensor en condiciones de baja luminosidad (https://pi.lbbcdn.com/wp-content/uploads/2016/01/Light-Sensor-Circuit.jpg)
+https://pi.lbbcdn.com/wp-content/uploads/2016/01/Light-Sensor-Circuit.jpg
 
 
 ## Instalar como un servicio
