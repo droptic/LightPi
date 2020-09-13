@@ -27,11 +27,11 @@ try:
 	while True:
 		i = rc_time(pin_to_circuit)
 		if i < 400:
-			print("Screen off", i)
+			print("Screen on", i)
 			call(["/usr/bin/vcgencmd", "display_power", "1"])
 			time.sleep(1)
 		elif i >=400:
-			print("Screen on", i)
+			print("Screen off", i)
 			call(["/usr/bin/vcgencmd", "display_power", "0"])
 			time.sleep(1)
 		
