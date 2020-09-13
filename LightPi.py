@@ -32,7 +32,7 @@ while True:
     elif i >=400:
         print("Screen on", i)
         call(["/usr/bin/vcgencmd", "display_power", "1"])
-        time.sleep(1)
+        time.sleep(10)
 		
 except KeyboardInterrupt:
     pass
