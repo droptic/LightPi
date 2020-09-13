@@ -29,7 +29,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=python /home/pi/LightPy.py
+ExecStart=sudo python /home/pi/LightPi.py
 Restart=on-abort
 
 [Install]
