@@ -1,4 +1,4 @@
-# LigthPy
+# LightPi
 Control de pantalla HDMI con sensor LDR en Raspberry Pi
 
 Programa que permite controlar el encedido y apagado de pantalla HDMI conectada a una Raspberri Pi mediante un sensor de luz LDR, en este caso se encuentra conectado al pin 7
