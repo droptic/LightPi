@@ -8,7 +8,7 @@ GPIO.setmode(GPIO.BOARD)
 #Pin al que esta conectado el sensor TLR
 pin_to_circuit = 7
 #Punto de corte para luz encedida y apagada
-lux = 1500
+lux = 10000
 
 def rc_time (pin_to_circuit):
     count = 0
