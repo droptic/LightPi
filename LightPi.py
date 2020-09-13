@@ -5,7 +5,11 @@ from subprocess import call
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
+#Pin al que esta conectado el sensor TLR
 pin_to_circuit = 7
+#Punto de corte para luz encedida y apagada
+lux = 400
+
 def rc_time (pin_to_circuit):
     count = 0
   
@@ -26,11 +30,11 @@ def rc_time (pin_to_circuit):
 try:	
 	while True:
 		i = rc_time(pin_to_circuit)
-		if i < 400:
+		if i < lux:
 			print("Screen on", i)
 			call(["/usr/bin/vcgencmd", "display_power", "1"])
 			time.sleep(1)
-		elif i >=400:
+		elif i >=lux:
 			print("Screen off", i)
 			call(["/usr/bin/vcgencmd", "display_power", "0"])
 			time.sleep(1)
