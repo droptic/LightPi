@@ -50,5 +50,5 @@ sudo systemctl start lightpi.service
 ```
 
 ### Check status
-`sudo systemctl status hello.service`
+`sudo systemctl status lightpi.service`
 
